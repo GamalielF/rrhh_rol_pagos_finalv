@@ -110,6 +110,87 @@
           }
         }
       }
+    },
+    "rrhh_roles": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/rrhh_roles",
+      "sourceRoot": "projects/rrhh_roles/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "projects/rrhh_roles/src/main.ts",
+            "tsConfig": "projects/rrhh_roles/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/rrhh_roles/public"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@taiga-ui/icons/src",
+                "output": "assets/taiga-ui/icons"
+              },
+              {
+                "glob": "**/*",
+                "input": "libs/base/src/assets",
+                "output": ""
+              }
+            ],
+            "styles": [
+              "node_modules/@taiga-ui/styles/taiga-ui-theme.less",
+              "projects/rrhh_roles/src/styles.css",
+              "libs/ui/src/styles.css"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects",
+                "libs"
+              ]
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "rrhh_roles:build:production"
+            },
+            "development": {
+              "buildTarget": "rrhh_roles:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test"
+        }
+      }
     }
   }
 }

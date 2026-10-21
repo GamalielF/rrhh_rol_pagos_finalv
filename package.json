@@ -16,7 +16,9 @@
     "delete": "node scripts/remove-project.mjs",
     "register": "node scripts/register-project.mjs",
     "start:creditos": "pnpm build:libs && ng serve creditos-cop-sanjose --open",
-    "build:creditos": "pnpm build:libs && ng build creditos-cop-sanjose"
+    "build:creditos": "pnpm build:libs && ng build creditos-cop-sanjose",
+    "start:rrhh_roles": "pnpm build:libs && ng serve rrhh_roles --open",
+    "build:rrhh_roles": "pnpm build:libs && ng build rrhh_roles"
   },
   "private": true,
   "packageManager": "pnpm@12.6.0",
