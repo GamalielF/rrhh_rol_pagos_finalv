@@ -7,5 +7,6 @@ export const env: AppEnvironment = {
   mfaVerifyUrl: 'https://pre-prod.coopsanjose.fin.ec/authenticator/api/v1/auth/mfa/verify',
   refreshUrl: 'https://pre-prod.coopsanjose.fin.ec/authenticator/api/v1/auth/refresh',
   apiBaseUrl: 'https://proxy.coopsanjose.fin.ec:8443/api/v1/analitics/',
-  userProfileUrl: 'https://proxy.coopsanjose.fin.ec:8443/api/v1/analitics/Usuarios/busca-usuario',
+  //userProfileUrl: 'https://proxy.coopsanjose.fin.ec:8443/api/v1/analitics/Usuarios/busca-usuario',
+  apiBaseUrl: 'http://localhost:8080/api/v1/roles-pago/',
 };

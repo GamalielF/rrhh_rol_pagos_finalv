@@ -5,5 +5,4 @@ export interface AppEnvironment {
   mfaVerifyUrl: string;
   refreshUrl: string;
   apiBaseUrl: string;
-  userProfileUrl: string;
 }

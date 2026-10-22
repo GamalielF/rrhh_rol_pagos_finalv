@@ -1,1 +1,2 @@
-export * from './user-profile.model';
+export * from './api-response.model';
+export * from './perfil.model';
